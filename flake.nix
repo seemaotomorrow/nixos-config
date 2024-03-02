@@ -6,15 +6,14 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    squirmy.url = "github:squirmy/nixos-config";
+    nix-machine.url = "github:squirmy/nix-machine";
   };
 
   outputs = inputs @ {self, ...}:
     inputs.flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["aarch64-darwin" "x86_64-darwin"];
       imports = [
-        ./lib
-        inputs.squirmy.flakeModule
+        inputs.nix-machine.flakeModule
         ./catalog
       ];
 
@@ -22,16 +21,8 @@
         nix-machine = {
           username = "maomingjian";
           homeDirectory = "/Users/maomingjian";
-          system = "x86_64-darwin";
-        };
-
-        squirmy = {
-          nix.enable = true;
-          trampoline.enable = true;
-        };
-
-        mao = {
-          kitty.enable = true;
+          nixpkgs.hostPlatform = "x86_64-darwin";
+          shells.zsh.enable = true;
         };
       };
     };
