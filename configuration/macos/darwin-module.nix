@@ -18,7 +18,6 @@
   # Issue: https://github.com/LnL7/nix-darwin/issues/88
   system.defaults.NSGlobalDomain = {
     AppleShowAllFiles = true;
-    AppleInterfaceStyle = "Light";
     AppleInterfaceStyleSwitchesAutomatically = false;
     NSAutomaticCapitalizationEnabled = false;
     NSAutomaticDashSubstitutionEnabled = false;
