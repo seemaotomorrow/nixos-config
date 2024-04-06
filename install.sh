@@ -7,8 +7,8 @@
   username="mao"
   hostname="Maos-MBP"
   nixos_config_dir="$HOME/.config/nixos-config"
-  nixos_config_repo_ssh="git@github.com:$username/nixos-config.git"
-  nixos_config_repo_http="https://github.com/$username/nixos-config"
+  nixos_config_repo_ssh="git@github.com:seemaotomorrow/nixos-config.git"
+  nixos_config_repo_http="https://github.com/seemaotomorrow/nixos-config"
 
   info_level="\033[0;33m"
   success_level="\033[0;32m"
