@@ -14,7 +14,7 @@
       systems = ["aarch64-darwin" "x86_64-darwin"];
       imports = [
         inputs.nix-machine.flakeModule
-        ./catalog
+        ./configuration
       ];
 
       nix-machine.macos."Ms-MacBook-Pro" = {
