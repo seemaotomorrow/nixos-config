@@ -1,12 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
-  # Enable ssh. Not sure how much to setup with this just yet.
-  programs.ssh.enable = true;
-
+{pkgs, ...}: {
   home.packages = [
     pkgs.openssh
   ];
